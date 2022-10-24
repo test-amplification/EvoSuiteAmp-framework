@@ -8,4 +8,5 @@ Replication Package
 
 ## Usage
 ```-class <ClassUnderTest> -projectCP <target/classes>:<target/test-classes> -Djunit=<developer-test> -Dselected_junit=<developer-test> -Dsearch_budget=<time in seconds> -Dassertion_timeout=<time in seconds> -criterion=BRANCH:STRONGMUTATION```
+
 ## Data
