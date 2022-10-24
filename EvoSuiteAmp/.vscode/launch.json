@@ -1,0 +1,138 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch StatInitIssue",
+            "request": "launch",
+            "mainClass": "com.examples.with.different.packagename.StatInitIssue",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch Regex",
+            "request": "launch",
+            "mainClass": "com.examples.with.different.packagename.concolic.Regex",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch TP1",
+            "request": "launch",
+            "mainClass": "com.examples.with.different.packagename.concolic.TP1",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch TP118",
+            "request": "launch",
+            "mainClass": "com.examples.with.different.packagename.concolic.TP118",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestCase53",
+            "request": "launch",
+            "mainClass": "com.examples.with.different.packagename.concolic.TestCase53",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestCase55",
+            "request": "launch",
+            "mainClass": "com.examples.with.different.packagename.concolic.TestCase55",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestCase70",
+            "request": "launch",
+            "mainClass": "com.examples.with.different.packagename.concolic.TestCase70",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch ClientProcess",
+            "request": "launch",
+            "mainClass": "org.evosuite.ClientProcess",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestSuiteGenerator",
+            "request": "launch",
+            "mainClass": "org.evosuite.TestSuiteGenerator",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch DetermineSUT",
+            "request": "launch",
+            "mainClass": "org.evosuite.junit.DetermineSUT",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch InheritanceTreeGenerator",
+            "request": "launch",
+            "mainClass": "org.evosuite.setup.InheritanceTreeGenerator",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch MersenneTwister",
+            "request": "launch",
+            "mainClass": "org.evosuite.utils.MersenneTwister",
+            "projectName": "evosuite-client"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainMethod",
+            "request": "launch",
+            "mainClass": "com.examples.with.different.packagename.MainMethod",
+            "projectName": "evosuite-master"
+        },
+        {
+            "type": "java",
+            "name": "Launch EvoSuite",
+            "request": "launch",
+            "mainClass": "org.evosuite.EvoSuite",
+            "projectName": "evosuite-master",
+            "args": "-class org.apache.commons.math.optimization.linear.SimplexTableau -projectCP /Users/firhardroslan/Desktop/gen_tests.pl_801561_1637666759/target/classes     -seed 972718101     -Dsearch_budget=10     -Dassertion_timeout=10  -Dtest_factory=JUNIT   -criterion=BRANCH:STRONGMUTATION -debug=TRUE"
+        },
+        {
+            "type": "java",
+            "name": "Launch EvoSuite Test",
+            "request": "launch",
+            "mainClass": "org.evosuite.EvoSuite",
+            "projectName": "evosuite-master",
+            "args": "-class tutorial.Stack -projectCP /Users/firhard/Desktop/evosuite/Tutorial_Stack/target/classes:/Users/firhardroslan/Desktop/evosuite/Tutorial_Stack/target/test-classes -Djunit=tutorial.StackTest -Dselected_junit=tutorial.StackTest -Dsearch_budget=30 -Dassertion_timeout=30 -criterion=BRANCH:STRONGMUTATION -Ddebug=true"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lang1f",
+            "request": "launch",
+            "mainClass": "org.evosuite.EvoSuite",
+            "projectName": "evosuite-master",
+            "args": "-class org.apache.commons.math3.fraction.Fraction -projectCP /Users/firhard/Documents/defects4j/math_26_buggy/target/classes:/Users/firhard/Documents/defects4j/math_26_buggy/target/test-classes -Djunit=org.apache.commons.math3.fraction.FractionTest -Dselected_junit=org.apache.commons.math3.fraction.FractionTest -Dsearch_budget=100 -Dassertion_timeout=100 -criterion=BRANCH:STRONGMUTATION -Ddebug=true"
+        },
+        // -Djunit /Users/firhardroslan/Desktop/evosuite/Tutorial_Stack/target/test-classes
+        {
+            "type": "java",
+            "projectName": "evosuite-client",
+            "name": "Debug (Attach)",
+            "request": "attach",
+            "hostName": "127.0.0.1",
+            "port": 1044
+        }
+    ]
+}
