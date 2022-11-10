@@ -1,6 +1,6 @@
 # An Empirical Comparison of EvoSuite and DSpot for Improving Developer-Written Test Suites with Respect to Mutation Score
 
-Replication Package (will update more about it soon)
+Replication Package (will update more about the usage and steps soon)
 
 ## Contents
 
