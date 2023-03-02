@@ -24,7 +24,7 @@ import org.evosuite.testcase.execution.ExecutionResult;
 import org.evosuite.testcase.execution.TestCaseExecutor;
 import org.evosuite.testsuite.TestSuiteChromosome;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.util.List;
 
@@ -52,7 +52,7 @@ public abstract class TestFitnessFunction
      */
     public abstract double getFitness(TestChromosome individual, ExecutionResult result);
     public abstract double getFitness(TestChromosome individual, ExecutionResult result, String flag);
-    public abstract Pair<String,Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag);
+    public abstract AbstractMap.SimpleEntry<String,Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag);
 
     /**
      * {@inheritDoc}
@@ -181,7 +181,7 @@ public abstract class TestFitnessFunction
         return isCovered(tc, result, flag);
     }
 
-    public Pair<String,Double> distance(TestChromosome tc, String flag) {
+    public AbstractMap.SimpleEntry<String,Double> distance(TestChromosome tc, String flag) {
 
         ExecutionResult result = tc.getLastExecutionResult();
         if (result == null || tc.isChanged()) {
@@ -189,11 +189,11 @@ public abstract class TestFitnessFunction
             tc.setLastExecutionResult(result);
             tc.setChanged(false);
         }
-        Pair<String,Double> distance = getFitness2(tc, result, flag);
+        AbstractMap.SimpleEntry<String,Double> distance = getFitness2(tc, result, flag);
         return distance;
     }
 
-    public Pair<String,Double> distance(TestChromosome tc) {
+    public AbstractMap.SimpleEntry<String,Double> distance(TestChromosome tc) {
 
         ExecutionResult result = tc.getLastExecutionResult();
         if (result == null || tc.isChanged()) {
@@ -201,7 +201,7 @@ public abstract class TestFitnessFunction
             tc.setLastExecutionResult(result);
             tc.setChanged(false);
         }
-        Pair<String,Double> distance = getFitness2(tc, result, "");
+        AbstractMap.SimpleEntry<String,Double> distance = getFitness2(tc, result, "");
         return distance;
     }
 

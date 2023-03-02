@@ -43,7 +43,7 @@ import org.evosuite.utils.ArrayUtil;
 import org.evosuite.utils.LoggingUtils;
 import org.evosuite.utils.Randomness;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.util.ArrayList;
 import java.util.HashSet;
