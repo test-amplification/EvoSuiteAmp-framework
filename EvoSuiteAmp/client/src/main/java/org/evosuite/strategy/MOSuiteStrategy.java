@@ -93,13 +93,16 @@ public class MOSuiteStrategy extends TestGenerationStrategy {
 
         List<muDistanceAnalysis> survivedGoals = new ArrayList<>();
         List<muDistanceAnalysis> coveredGoals = minimizer.filterJUnitCoveredGoals2(goals);
-        goals.forEach(goal -> {
-            coveredGoals.forEach(coveredGoal -> {
-                if(coveredGoal.getGoal().equals(goal)) {
-                    survivedGoals.add(coveredGoal);
-                }
+        // check first the covered goals are null or not!
+        if(coveredGoals != null) {
+            goals.forEach(goal -> {
+                coveredGoals.forEach(coveredGoal -> {
+                    if (coveredGoal.getGoal().equals(goal)) {
+                        survivedGoals.add(coveredGoal);
+                    }
+                });
             });
-        });
+        }
 
         List<muDistanceAnalysis> minDistanceSurvivedGoals = minDisSurvivedGoals(survivedGoals);
 
