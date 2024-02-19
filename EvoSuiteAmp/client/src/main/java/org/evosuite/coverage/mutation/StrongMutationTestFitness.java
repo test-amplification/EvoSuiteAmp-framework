@@ -30,7 +30,7 @@ import org.evosuite.testcase.execution.ExecutionResult;
 import org.evosuite.testcase.execution.ExecutionTrace;
 import org.evosuite.testcase.execution.TestCaseExecutor;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -527,7 +527,7 @@ public class StrongMutationTestFitness extends MutationTestFitness {
     }
 
     @Override
-    public Pair<String,Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag) {
+    public AbstractMap.SimpleEntry<String,Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag) {
 
         // impact (0..1)
         // asserted: 0/1
@@ -610,12 +610,12 @@ public class StrongMutationTestFitness extends MutationTestFitness {
             else if(infectionDistance >= 0){
                 String[] flag2 = flag.split("__");
                 // logger.warn(mutation.getId() + "," + infectionDistance + ",iDM," + flag2[0] + "," + flag2[1]);
-                return new Pair("iDM", infectionDistance);
+                return new AbstractMap.SimpleEntry("iDM", infectionDistance);
             }
         } else if (executionDistance > 0){
             String[] flag2 = flag.split("__");
             // logger.warn(mutation.getId() + "," + executionDistance + ",eDM," + flag2[0] + "," + flag2[1]);
-            return new Pair("eDM", executionDistance);
+            return new AbstractMap.SimpleEntry("eDM", executionDistance);
         }
 
         if (!exceptionCase){
@@ -635,7 +635,7 @@ public class StrongMutationTestFitness extends MutationTestFitness {
         }
 
         // logger.warn(mutation.getId() + "," + executionDistance + " \" \"");
-        return new Pair("", fitness);
+        return new AbstractMap.SimpleEntry("", fitness);
     }
 
     /* (non-Javadoc)

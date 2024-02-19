@@ -29,7 +29,7 @@ import org.evosuite.testcase.statements.EntityWithParametersStatement;
 import org.evosuite.testcase.statements.MethodStatement;
 import org.evosuite.testcase.statements.Statement;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -215,7 +215,7 @@ public class MethodCoverageTestFitness extends TestFitnessFunction {
     }
 
     @Override
-    public Pair<String, Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag) {
+    public AbstractMap.SimpleEntry<String, Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag) {
         // TODO Auto-generated method stub
         return null;
     }

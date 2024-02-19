@@ -28,7 +28,7 @@ import org.evosuite.testcase.execution.ExecutionResult;
 import org.evosuite.testcase.execution.TestCaseExecutor;
 import org.objectweb.asm.Type;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.util.Objects;
 import java.util.Set;
@@ -314,7 +314,7 @@ public class InputCoverageTestFitness extends TestFitnessFunction {
     }
 
     @Override
-    public Pair<String, Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag) {
+    public AbstractMap.SimpleEntry<String, Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag) {
         // TODO Auto-generated method stub
         return null;
     }

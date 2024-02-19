@@ -3,16 +3,16 @@ package org.evosuite.testsuite;
 import org.evosuite.testcase.TestChromosome;
 import org.evosuite.testcase.TestFitnessFunction;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 public class muDistanceAnalysis {
 
     private TestFitnessFunction testFitnessFunction = null;
-    private Pair<String,Double> distance = null;
+    private AbstractMap.SimpleEntry<String,Double> distance = null;
     private String testName = "";
     private TestChromosome testChromosome = null;
 
-    public muDistanceAnalysis(TestFitnessFunction goal, Pair<String, Double> distance2, String name, TestChromosome tC) {
+    public muDistanceAnalysis(TestFitnessFunction goal, AbstractMap.SimpleEntry<String, Double> distance2, String name, TestChromosome tC) {
         testFitnessFunction = goal;
         distance = distance2;
         testName = name;
@@ -23,7 +23,7 @@ public class muDistanceAnalysis {
         return testFitnessFunction;
     }
 
-    public Pair<String, Double> getDistance() {
+    public AbstractMap.SimpleEntry<String, Double> getDistance() {
         return distance;
     }
 
@@ -39,7 +39,7 @@ public class muDistanceAnalysis {
         this.testFitnessFunction = testFitnessFunction;
     }
 
-    public void setDistance(Pair<String, Double> distance){
+    public void setDistance(AbstractMap.SimpleEntry<String, Double> distance){
         this.distance = distance;
     }
 

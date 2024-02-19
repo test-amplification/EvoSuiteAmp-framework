@@ -47,7 +47,7 @@ import org.evosuite.utils.Randomness;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -257,9 +257,9 @@ public abstract class AbstractMOSA extends GeneticAlgorithm<TestChromosome> {
     //     // we generate two offsprings  
     //     for (muDistanceAnalysis mDistance: muDistancePopulation){
     //         TestChromosome tC = mDistance.getTestChromosome();
-    //         Pair<String,Double> distance = mDistance.getDistance();
+    //         AbstractMap.SimpleEntry<String,Double> distance = mDistance.getDistance();
     //         TestFitnessFunction tCF = mDistance.getGoal();
-    //         Pair<String,Double> tCMDistance = new Pair<String,Double>("One", (double) 99);
+    //         AbstractMap.SimpleEntry<String,Double> tCMDistance = new AbstractMap.SimpleEntry<String,Double>("One", (double) 99);
 
     //         int survivedMutant = 0;
     //         while (survivedMutant < 200 

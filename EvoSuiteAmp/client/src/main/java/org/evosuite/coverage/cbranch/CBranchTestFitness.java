@@ -28,7 +28,7 @@ import org.evosuite.testcase.TestChromosome;
 import org.evosuite.testcase.TestFitnessFunction;
 import org.evosuite.testcase.execution.ExecutionResult;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -224,7 +224,7 @@ public class CBranchTestFitness extends TestFitnessFunction {
     }
 
     @Override
-    public Pair<String, Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag) {
+    public AbstractMap.SimpleEntry<String, Double> getFitness2(TestChromosome individual, ExecutionResult result, String flag) {
         // TODO Auto-generated method stub
         return null;
     }

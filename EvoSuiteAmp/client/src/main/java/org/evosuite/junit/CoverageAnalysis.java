@@ -64,7 +64,7 @@ import org.objectweb.asm.ClassReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.io.*;
 import java.lang.reflect.Modifier;
@@ -82,7 +82,7 @@ import eu.stamp_project.dspot.common.execution.TestRunner;
 import eu.stamp_project.dspot.common.miscellaneous.CloneHelper;
 import eu.stamp_project.dspot.common.miscellaneous.DSpotUtils;
 import eu.stamp_project.dspot.common.test_framework.TestFramework;
-import javafx.util.Pair;
+import java.util.AbstractMap;
 import spoon.Launcher;
 import spoon.reflect.code.CtStatement;
 import spoon.reflect.declaration.CtClass;
